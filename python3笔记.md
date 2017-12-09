@@ -17,4 +17,37 @@
 		
 		
 	
+##2017-12-02
++ 替换一个字符串中的字符方法
+		
+		使用string和list之间的转换，把string先转换成list，然后进行替换或者改变，然后
+		把list再转换成string
+		如下：
+	![](http://i4.bvimg.com/620700/4214df32157e51db.png)
+		
+		使用如上方法，最后的join方法即为重新转化的方法
++ 生成一个全排列字典的方法
+
+		import itertools
+		v = itertools.product('ACGT', repeat=x)
+		C = {}
+		for i in v:
+    		C[''.join(i)] = 0
+    	如上，即导入itertools包后使用一个字典来储存,x为全排列的位数，前面是内容，key值
+    	为全排列的内容，val为0
+    	
++ count函数使用注意：
+
+		count函数在使用时只能返回不重复的子串数量，不能返回有重复的子串数量，需要自己写
+		函数实现，如下    	
+	![](http://i2.bvimg.com/620700/726d3e6274618f59.png)
 	
+		如图，返回值为str1在str2中的数目（有重复）
+		例如：aa在aaa中数量为2（有重复），数量为1（无重复）
+		
++ 字符串切片方法总结
+
+		str[::-1}
+		
+		
+		

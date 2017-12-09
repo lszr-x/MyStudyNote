@@ -9,9 +9,7 @@
 ### TooBarActivity中改变样式的方法
 	布局文件中添加一个width为0的TextView，然后添加对应的set方法，在继承的activity文件
 	中写一个initTitle方法，对于此方法，使用findViewById时要提前调用getToolBar方法然
-	后再调用findViewById方法，如图：
-![TooBarActivity样式](http://i2.bvimg.com/620700/c13db5fb934bc838.png)
-
+	后再调用findViewById方法
 	然后后面点击事件一般正常使用即可
 ### 关于Activity退出相关事宜（singleTask)
 	方法一：
@@ -52,6 +50,7 @@
 	下：
 ![](http://i4.bvimg.com/620700/5cacf686f3d43ec3.png)
 
+##2017-12-0
 	
 
 	
