@@ -97,8 +97,13 @@ _接下来把上述二进制加法3步计算法用位运算替换：
 	const float EPSINON = 0.000001;
 	
 	
-
-
++ set使用：
+	+ 使用结构体插入时，需要去重写运算符，把结构体的大小比较明确：
+	
+			bool operator<(const test & x,const test & y)
+			{
+			    return x.c>y.c;
+			}
 
 
 
