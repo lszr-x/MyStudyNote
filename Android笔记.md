@@ -386,7 +386,27 @@ Bundle的对象进行类似哈希的绑定（与第一种方法类似），然�
 		
 
 
-	+ 正则表达式工具类（RegexpUtils）：
+##20180411
++ Android文件相关：
+	+ File类：
+		+ 构造方法：参数为文件路径
+		+ 手机存储空间根目录：Environment.getExternalStorageDirectory().getCanonicalFile()
+		+ 创建新文件方法，首先判断是否有这个文件，如果没有，调用createNewFile()方法创建文件，或者调用mkdirs()方法创建目录：
+		
+				mRecorderFile = new File(Environment.
+											getExternalStorageDirectory().
+											getCanonicalFile() + 
+											"/projectTest/sound.amr");
+	                       if(!mRecorderFile.exists()){
+	                           mRecorderFile.createNewFile();
+	                       }
+	                       
+
+>参考网站：	         
+>
+>[https://blog.csdn.net/lixiang_Y/article/details/54946199?locationNum=2&fps=1](https://blog.csdn.net/lixiang_Y/article/details/54946199?locationNum=2&fps=1)              
+>
+>[https://blog.csdn.net/guoqingshuang/article/details/52443423](https://blog.csdn.net/guoqingshuang/article/details/52443423)
 
 
 
