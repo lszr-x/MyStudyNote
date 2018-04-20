@@ -109,6 +109,12 @@ _接下来把上述二进制加法3步计算法用位运算替换：
 
 
 
+###int与string
+![](http://p34is8180.bkt.clouddn.com/18-4-14/38899704.jpg)
+
+![](http://p34is8180.bkt.clouddn.com/18-4-14/32382841.jpg)
+
+
 
 
 

@@ -5,19 +5,19 @@ title:android声音
 
 
 
-#Android声音相关总结
+# Android声音相关总结
 
 
 >  作者：不洗碗工作室 - lszr
 
->  文章出处：[Android中活动间通信总结](https://lszr-x.github.io/)
+>  文章出处：[Android声音相关总结](https://lszr-x.github.io/)
 
 >  版权归作者所有，转载请注明出处
 
 
 
 
-##1、控制系统声音
+## 1、控制系统声音
 
 Android中系统声音可以直接去控制，不需要获取系统权限，使用方法也很简单，下面看例子：
 
@@ -60,10 +60,10 @@ Android中系统声音可以直接去控制，不需要获取系统权限，使�
 	FLAG\_VIBRATE						如果进入振动振铃模式，是否振动。
 	
 	
-##2、播放音频
+## 2、播放音频
 
 	
-###一、使用MediaPlayer播放本地音频
+### 一、使用MediaPlayer播放本地音频
 
 
 Android中播放音频可以用MediaPlayer进行音频和视频的播放，这里先说播放本地音频的方法：
@@ -188,7 +188,7 @@ Android中播放音频可以用MediaPlayer进行音频和视频的播放，这�
 可以看到，在调用stop()方法后需要重新调用prepare()方法，否则会导致无法重新播放。
 如上就是使用MediaPlayer播放本地音频的方法。
 
-###二、使用MediaPlayer播放网络音频
+### 二、使用MediaPlayer播放网络音频
 
 与播放本地音频不同的是，播放网络视频的时候一般需要进行异步的prepare，因此，需要实现四个接口：
 
@@ -311,7 +311,7 @@ Android中播放音频可以用MediaPlayer进行音频和视频的播放，这�
     }
     
 如上就是使用MediaPlayer播放网络音频的方法
-###三、使用SoundPool播放音频
+### 三、使用SoundPool播放音频
 
 SoundPool一般用来 播放密集，急促而又短暂的音效，比如特技音效：Duang~，游戏用得较多，这里根据网上的教程，使用老式的SoundPool的构造方法是可以直接用的，老式的构造方法有三个参数，第一个为指定支持多少个声音，SoundPool对象中允许同时存在的最大流的数，第二个为指定声音类型，流类型可以分为STREAM_VOICE_CALL, STREAM_SYSTEM, STREAM_RING,STREAM_MUSIC 和 STREAM_ALARM四种类型，可以指定使用不同类型的系统音量去播放音效，比如通话音量和媒体音量，在AudioManager中定义，第三个为指定声音品质（采样率变换质量），一般直接设置为0。
 
@@ -359,9 +359,9 @@ soundID就是load返回的id内容，第二三个参数为左右声道的音量�
  这里使用sp去调用load和play方法就可以正常地播放了。
  
  
-##3、Android的三个录音方法
+## 3、Android的三个录音方法
 
-###一、调用系统录音功能直接录音：
+### 一、调用系统录音功能直接录音：
 
 使用Intent调用系统本身自带的录音功能可以实现简单的录音功能：
 
@@ -414,7 +414,7 @@ soundID就是load返回的id内容，第二三个参数为左右声道的音量�
 
 调用系统录音功能较为简单，下面看调用官方类库的方法：
 
-###二、调用MediaRecorder类的方法来录音：
+### 二、调用MediaRecorder类的方法来录音：
 
 
 总的来说，使用MediaRecorder流程如下:
@@ -490,7 +490,7 @@ soundID就是load返回的id内容，第二三个参数为左右声道的音量�
 有时候录音想要暂停一下，需要调用pause()方法，然后重新开始录制的时候需要调用resume方法，停止录音的时候和前面一样调用stop方法就好。
 
 
-###三、使用AudioRecord录音
+### 三、使用AudioRecord录音
 AudioRecord和MediaRecorder相比更加底层一些，MediaRecorder类对于录音的封装相对要完备一些，AudioRecord同时也就更加灵活一些，可以直接读取到音频的数据，对音频进行一些处理等等。
 使用AudioRecord类来进行录音时，可以使用AudioTrack进行流数据读取和播放，也可以把AudioRecord的数据保存成文件，添加header，然后使用MediaPlayer播放。
 关于使用AudioTrack进行AudioRecord的播放较为复杂，而且与实现实时语音聊天有关，因此这里不做展开，以后再做语音聊天相关总结时会详细说，这里只总结关于AudioRecord进行录音的操作。
