@@ -59,5 +59,14 @@ title : Android 笔记第二版
 		+ 设置播放文件时的竖屏，setOrientationHint(90);
 		+ 和Camera一起设置预览，setPreviewDisplay(surfaceView.getHolder().getSurface());
 		+ 调用prepare和start的方法去开始录制
-	+ <font color="#A52A2A">hhh能改颜色<font>
-	+ 
+	+ <font color="#87CEFF">hhh能改颜色</font>
+	+ <font color="#87CEFF">3、结束录制</font>
+	+ <font color="#87CEFF">4、点击聚焦</font>
+
+
+###4、TextView的特殊设置
++ 加粗：设置textStyle为bold
++ 设置行距：android:lineSpacingExtra
++ 设置行间距的倍数：android:lineSpacingMultiplier，取值范围：浮点数，如果值大于1.0表示增加行间距，如果值小于1.0表示减少行间距，等于1.0时表示无变化。
++ 代码中设置行间距和倍数：TextView.setLineSpacing(float add, float mult)。
+
